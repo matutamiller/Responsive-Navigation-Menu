@@ -1,0 +1,150 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	min-height: 100%;
+	font-family: "Exo";
+	display: block;
+	background: url(bg.jpeg) no-repeat center;
+	background-size: cover;
+}
+
+section {
+	position: relative;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+.content-wr {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+#nav {
+	height: 50px;
+	background-color: #ffffff;	
+	box-sizing: border-box;
+}
+
+#nav .content-wr {
+	flex-direction: row;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+#name {
+	margin: 15px 20px;
+	color: #4bcaff;	
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 18px;
+}
+.buttons {
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+.buttons a {
+	margin: 20px 20px;
+	color: #353f47;
+	font-weight: 400;	
+}
+
+
+#nav .content-wr .buttons a:hover,
+#nav .content-wr .buttons a:focus {
+	color: #4bcaff;
+	transition: color 0.5s ease;
+}
+
+nav.mob{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #4bcaff;
+	height: 50px;
+}
+#mob-name {
+	display: flex;
+	flex-wrap: nowrap;
+	height: 50px;
+	justify-content: space-between;
+	align-items: center;
+} 
+nav.mob ul li:hover{
+	background: #4bcaff;
+}
+  
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+ 
+#mobname {
+	margin: 15px 20px;	
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 18px;
+	color: #ffffff;
+}
+.mob,
+.hamburger-btn {
+	display: none;
+}
+ 
+@media screen and (max-width: 1000px) {
+  nav.desk {
+  	display: none;
+}
+
+nav.mob,
+.hamburger-btn {
+    display: block;
+}
+
+.hamburger-btn {
+    position: relative;
+}
+ 
+.hamburger-btn .fa-bars,
+.hamburger-btn .fa-times {
+	position: fixed;
+	right: 25px;
+	top: 8px;
+	font-size: 35px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.mob ul{
+	background: #4bcaff;
+	display: none;
+}
+ 
+.mob li {
+	text-align: center;
+	padding: 20px;
+	text-transform: uppercase;
+	cursor: pointer;
+	list-style-type: none;
+	transition: color 0.5s ease;
+}
+.mob li a:hover {
+	color: #607d8b;
+	transition: color 0.5s ease;
+}
+
+.mob ul.active {
+	display: block;
+	margin-top: -8px;
+	padding-left: 0px;
+}
